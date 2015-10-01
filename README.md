@@ -44,7 +44,7 @@ Please visit <a href="https://onlinefaxes.readme.io/v2.0" target="_blank">Online
 #### Version
 * 1.0 - October 1st. 2015
 
-# Directory structure
+#### Directory structure
 
 This is the directory structure you will end up with following the instructions in the Installation Guide.
 
