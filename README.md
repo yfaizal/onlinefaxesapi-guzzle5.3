@@ -4,6 +4,10 @@ Sample application for OnlineFaxes API using Guzzle5.3
 This is a basic/simple PHP application using Guzzle5.3 to interact with <a href="https://onlinefaxes.readme.io/v2.0" target="_blank">OnlineFaxes API</a>.
 You can download and modify it to suit with your needs.
 
+#### Screenshot
+![dashboard image](http://syngular.pw/sample/dashboard.jpg)
+![send fax form](http://syngular.pw/sample/send-fax.jpg)
+
 #### Features included :-
 * Auto-checking token expiry before every request.
 * Re-request for a new token and save it into database ( sample sql included. )
@@ -23,7 +27,7 @@ Click <a href="http://syngular.pw/sample" target="_blank">here</a> to see a live
 * <a href="http://datatables.net/" target="_blank">DataTables</a> for fax listing.
 * <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> for theme and layout.
 
-#### Implement all but one API's from onlinefaxes.readme.io (as of 1st. October 2015) :-
+#### Implement all but one API from onlinefaxes.readme.io :-
 * Send Fax-Complex Model
 * Get Access Token
 * Get Fax Status
