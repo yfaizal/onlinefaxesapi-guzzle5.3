@@ -6,13 +6,14 @@ You can download and modify it to suit with your needs.
 
 #### Features included :-
 * Auto-checking token expiry before every request.
-* Re-request for a new token and save into database ( sample sql included. )
+* Re-request for a new token and save it into database ( sample sql included. )
+* Use PHP Session Upload Progress to hold Posting to API until finished uploading/attaching big file(s).
 
 #### Features NOT included :-
 * Form Validation ( Form for sending Fax )
 
 #### Live Demo
-Click <a href="http://syngular.pw/onlinefaxes" target="_blank">here</a> to see a live demo.
+Click <a href="http://syngular.pw/sample" target="_blank">here</a> to see a live demo.
 
 #### Built with and tested on :-
 * <a href="https://github.com/guzzle/guzzle/tree/5.3" target="_blank">Guzzle5.3</a>.
@@ -22,20 +23,37 @@ Click <a href="http://syngular.pw/onlinefaxes" target="_blank">here</a> to see a
 * <a href="http://datatables.net/" target="_blank">DataTables</a> for fax listing.
 * <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> for theme and layout.
 
+#### Implement all but one API's from onlinefaxes.readme.io (as of 1st. October 2015) :-
+* Send Fax-Complex Model
+* Get Access Token
+* Get Fax Status
+* Download Fax
+* Delete Fax
+* Get Fax Detail
+* Get Fax List
+
+Note: Did not implement 'Send Fax-Simple Model' because personally I think the 'Complex Model' example already cover it all. 
+
 #### Official Documentation
 Please visit <a href="https://onlinefaxes.readme.io/v2.0" target="_blank">OnlineFaxes API</a> for all the API lists and it's documentation.
 
 #### Version
-Click <a href="http://syngular.pw/onlinefaxes" target="_blank">here</a> to see a live demo.
+* 1.0 - October 1st. 2015
 
 # Directory structure
 
 This is the directory structure you will end up with following the instructions in the Installation Guide.
 
-    |-- src
+    |-- sample
+    |   |-- uploads   
     |   |-- vendor
     |       |-- guzzlehttp
+    |       |-- ... ( others libs/dependencies )    
 
+* `/sample` - application folder that contained all the php files.
+* `/sample/uploads` - for attachment/upload files before being pick-up by Guzzle PostFile() to send fax.
+* `/sample/vendor` - Mainly for Guzzle and it's dependencies - through composer.
 
-* `/src` - all the php files.
-* `/src/vendor` - Guzzle and other dependencies libraries.
+#### TODO
+* Dynamically add/remove recipient.
+* Dynamically add/remove file.
