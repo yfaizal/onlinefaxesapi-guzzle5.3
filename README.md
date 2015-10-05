@@ -54,7 +54,7 @@ This is the directory structure you will end up with following the instructions 
     |       |-- guzzlehttp
     |       |-- ... ( others libs/dependencies )    
 
-* `/sample` - application folder that contained all the php files.
+* `/sample` - main folder that also contained all the php files.
 * `/sample/uploads` - for attachment/upload files before being pick-up by Guzzle PostFile() to send fax.
 * `/sample/vendor` - Mainly for Guzzle and it's dependencies - through composer.
 
