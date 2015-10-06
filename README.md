@@ -5,8 +5,10 @@ This is a basic/simple PHP application using Guzzle5.3 to interact with <a href=
 You can download and modify it to suit with your needs.
 
 #### Screenshot
-![dashboard image](http://syngular.pw/sample/dashboard.jpg)
-![send fax form](http://syngular.pw/sample/send-fax.jpg)
+<img src="http://syngular.pw/sample/dashboard.jpg" alt="Dashboard Screenshot" width="600"/>
+
+
+<img src="http://syngular.pw/sample/send-fax.jpg" alt="Send Fax Screenshot" width="600"/>
 
 #### Features included :-
 * Auto-checking token expiry before every request.
