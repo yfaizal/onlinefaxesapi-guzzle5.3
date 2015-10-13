@@ -50,9 +50,11 @@ Please visit <a href="https://onlinefaxes.readme.io/v2.0" target="_blank">Online
 This is the directory structure you will end up with following the instructions in the Installation Guide.
 
     |-- sample
+    |   * all .php files
     |   |-- uploads
     |   |-- scripts
     |   |-- css
+    |   |-- sql
     |   |-- vendor
     |       |-- guzzlehttp
     |       |-- ... ( others libs/dependencies )    
