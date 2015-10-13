@@ -14,9 +14,7 @@ You can download and modify it to suit with your needs.
 * Auto-checking token expiry before every request.
 * Re-request for a new token and save it into database ( sample sql included. )
 * Use PHP Session Upload Progress to hold Posting to API until finished uploading/attaching big file(s).
-
-#### Features NOT included :-
-* Form Validation ( Form for sending Fax )
+* Basic server-side validation to check some blank fields (send fax form).
 
 #### Live Demo
 Click <a href="http://syngular.pw/sample" target="_blank">here</a> to see a live demo.
