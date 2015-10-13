@@ -37,7 +37,7 @@ Click <a href="http://syngular.pw/sample" target="_blank">here</a> to see a live
 * Get Fax Detail
 * Get Fax List
 
-Note: The send fax operation is a combination of Simple and Complex Model.Please see sample code send-fax.php to understand the logic/flow. 
+Note: The send fax operation is a combination of Simple and Complex Model.Please see send-fax.php file to understand the logic/flow. 
 
 #### Official Documentation
 Please visit <a href="https://onlinefaxes.readme.io/v2.0" target="_blank">OnlineFaxes API</a> for all the API lists and it's documentation.
