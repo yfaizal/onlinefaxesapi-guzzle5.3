@@ -29,8 +29,9 @@ Click <a href="http://syngular.pw/sample" target="_blank">here</a> to see a live
 * <a href="http://datatables.net/" target="_blank">DataTables</a> for fax listing.
 * <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> for theme and layout.
 
-#### Implement all but one API from onlinefaxes.readme.io :-
+#### Implement all APIs from onlinefaxes.readme.io :-
 * Send Fax-Complex Model
+* Send Fax-Simple Model
 * Get Access Token
 * Get Fax Status
 * Download Fax
@@ -38,7 +39,7 @@ Click <a href="http://syngular.pw/sample" target="_blank">here</a> to see a live
 * Get Fax Detail
 * Get Fax List
 
-Note: Did not implement 'Send Fax-Simple Model' because personally I think the 'Complex Model' example already cover it all. 
+Note: The send fax operation is a combination of Simple and Complex Model.Please see sample code send-fax.php to understand the logic/flow. 
 
 #### Official Documentation
 Please visit <a href="https://onlinefaxes.readme.io/v2.0" target="_blank">OnlineFaxes API</a> for all the API lists and it's documentation.
@@ -51,14 +52,20 @@ Please visit <a href="https://onlinefaxes.readme.io/v2.0" target="_blank">Online
 This is the directory structure you will end up with following the instructions in the Installation Guide.
 
     |-- sample
-    |   |-- uploads   
+    |   |-- uploads
+    |   |-- scripts
+    |   |-- css
     |   |-- vendor
     |       |-- guzzlehttp
     |       |-- ... ( others libs/dependencies )    
 
 * `/sample` - main folder that also contained all the php files.
+* `/sample/config.php` - configuration file for base url,upload file settings,your client_id & secret_id settings.Set this first before running this sample application.
 * `/sample/uploads` - for attachment/upload files before being pick-up by Guzzle PostFile() to send fax.
 * `/sample/vendor` - Mainly for Guzzle and it's dependencies - through composer.
+* `/sample/scripts` - javascripts files.
+* `/sample/css` - css file for additional style.
+* `/sample/sql` - sql file for token's table.You must setup this database/table because the application need this to check,request and update token.
 
 #### TODO
 * Dynamically add/remove recipient.
