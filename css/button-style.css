@@ -1,0 +1,41 @@
+/*
+* Credit to:
+* http://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3/
+*/
+
+/* custom style for file attachment button */
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+/* -- upload files status bar -- */
+#bar_blank {
+    border: solid 1px #000;
+    height: 20px;
+    width: 300px;
+}
+
+#bar_color {
+    background-color: #006666;
+    height: 20px;
+    width: 0px;
+}
+
+#bar_blank, #hidden_iframe {
+    display: none;
+}
