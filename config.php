@@ -2,7 +2,7 @@
 // For demo purpose only.Must be put outside public folder or save into database
 
 //get token from database
-$conn = new ("localhost","my_user","my_password","my_db");
+$conn = new mysqli("localhost","my_user","my_password","my_db");
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
