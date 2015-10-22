@@ -73,7 +73,7 @@ This is the directory structure you will end up with following the instructions 
 * Download the source code.
 * Since it's already included composer.phar & composer.json, just run ```composer.phar update``` to get Guzzle5 and OAuth2 plugin.The ```vendor/autoload.php``` have been included in ```_header.php``` file.
 * Create a database and import /sql/token_table.sql
-* Set everything in config.php - mysql settings, api client's info, file upload settings etc.
+* Set everything in config.php - db conn, api client, file upload settings etc.
 * Run the sample application.
 
 Important ! : You MUST have an account with OnlineFaxes.com and then create fax application as mentioned <a href="https://onlinefaxes.readme.io/docs/getting-started-1" target="_blank">here</a>.You still can test this application by subscribing to their <a href="http://www.onlinefaxes.com/Pricing#pricing" target="_blank">Free Trial</a> package.
