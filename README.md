@@ -71,7 +71,7 @@ This is the directory structure you will end up with following the instructions 
 
 #### Installation Guide :-
 * Download the source code.
-* Since it's already included composer.phar & composer.json, just run ```composer.phar update``` to get Guzzle5 and OAuth2 plugin.
+* Since it's already included composer.phar & composer.json, just run ```composer.phar update``` to get Guzzle5 and OAuth2 plugin.The ```vendor/autoload.php``` have been included in ```_header.php``` file.
 * Create a database and import /sql/token_table.sql
 * Set everything in config.php - mysql settings, api client's info, file upload settings etc.
 * Run the sample application.
