@@ -18,7 +18,7 @@ You can download and modify it to suit with your needs.
 * Use OAuth2 plugin by <a href="https://github.com/commerceguys/guzzle-oauth2-plugin" target="_blank">Commerce Guys</a>.
 
 #### Live Demo
-Click <a href="http://syngular.pw/sample" target="_blank">here</a> to see a live demo.
+Click <a href="http://apidemo.onlinefaxes.com" target="_blank">here</a> to see a live demo.
 
 #### Built with and tested on :-
 * <a href="https://github.com/guzzle/guzzle/tree/5.3" target="_blank">Guzzle5.3</a>.
@@ -68,6 +68,6 @@ This is the directory structure you will end up with following the instructions 
 * `/sample/css` - css file for additional style.
 * `/sample/sql` - sql file for token's table.You must setup this database/table because the application need this to check,request and update token.
 
-#### TODO
+#### TODO ( Next Version )
 * Dynamically add/remove recipient.
 * Dynamically add/remove file.
