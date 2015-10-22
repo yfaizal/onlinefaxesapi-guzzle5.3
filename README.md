@@ -25,6 +25,7 @@ Click <a href="http://apidemo.onlinefaxes.com" target="_blank">here</a> to see a
 * <a href="https://www.debian.org/releases/wheezy/" target="_blank">Debian 7</a>.
 * <a href="http://httpd.apache.org/docs/2.2/" target="_blank">Apache 2.2.22</a>.
 * <a href="http://php.net/downloads.php#v5.4.0" target="_blank">PHP 5.4.44</a>.
+* <a href="http://www.mysql.com/" target="_blank">MySql 5.5.44</a>.
 * <a href="http://datatables.net/" target="_blank">DataTables</a> for fax listing.
 * <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> for theme and layout.
 
@@ -67,6 +68,15 @@ This is the directory structure you will end up with following the instructions 
 * `/sample/scripts` - javascripts files.
 * `/sample/css` - css file for additional style.
 * `/sample/sql` - sql file for token's table.You must setup this database/table because the application need this to check,request and update token.
+
+#### Installation Guide :-
+* Download the source code
+* Since it's already included composer.phar & composer.json, just run ```composer.phar update``` to get Guzzle5 and OAuth2 plugin.
+* Create a database and import /sql/token_table.sql .
+* Set everything in config.php - mysql settings, api client's info, file upload settings etc.
+* Run the sample application
+
+Important ! : You MUST have an account with OnlineFaxes.com and then create fax application as mentioned <a href="https://onlinefaxes.readme.io/docs/getting-started-1" target="_blank">here</a>.You still can test this application by subscribing to their <a href="http://www.onlinefaxes.com/Pricing#pricing" target="_blank">Free Trial</a> package.
 
 #### TODO ( Next Version )
 * Dynamically add/remove recipient.
