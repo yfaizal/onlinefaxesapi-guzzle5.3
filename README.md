@@ -70,11 +70,11 @@ This is the directory structure you will end up with following the instructions 
 * `/sample/sql` - sql file for token's table.You must setup this database/table because the application need this to check,request and update token.
 
 #### Installation Guide :-
-* Download the source code
+* Download the source code.
 * Since it's already included composer.phar & composer.json, just run ```composer.phar update``` to get Guzzle5 and OAuth2 plugin.
-* Create a database and import /sql/token_table.sql .
+* Create a database and import /sql/token_table.sql
 * Set everything in config.php - mysql settings, api client's info, file upload settings etc.
-* Run the sample application
+* Run the sample application.
 
 Important ! : You MUST have an account with OnlineFaxes.com and then create fax application as mentioned <a href="https://onlinefaxes.readme.io/docs/getting-started-1" target="_blank">here</a>.You still can test this application by subscribing to their <a href="http://www.onlinefaxes.com/Pricing#pricing" target="_blank">Free Trial</a> package.
 
