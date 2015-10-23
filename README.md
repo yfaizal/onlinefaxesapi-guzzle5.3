@@ -74,7 +74,7 @@ This is the directory structure you will end up with following the instructions 
 * Get Guzzle5 and it's OAuth2 plugin through Composer so run the following command ```composer.phar update``` .The ```vendor/autoload.php``` have been included in ```_header.php``` file.
 * Create a database and import /sql/token_table.sql
 * Set everything in config.php - db conn, api client, file upload settings etc.
-* Run the sample application.You will be redirect to the get token page at first.Click the button, once token had been update you will be redirect to dashboard.
+* Open your browser and browse to the sample application.You will be redirect to the get token page at first.Click the button, once token had been update you will be redirect to dashboard.
 
 Important ! : To test/run this sample application, you MUST have an account with OnlineFaxes.com and then create fax application as mentioned <a href="https://onlinefaxes.readme.io/docs/getting-started-1" target="_blank">here</a>.You still can test this application by subscribing to their <a href="http://www.onlinefaxes.com/Pricing#pricing" target="_blank">Free Trial</a> package.
 
