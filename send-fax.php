@@ -275,7 +275,7 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
             <div class="form-group">
                 <label for="inputSenderName" class="col-md-4 control-label">Sender Name:</label>
                 <div class="col-md-8">
-                    <input class="form-control" id="inputSenderName" name="inputSenderName" placeholder="Sender Name" type="text" value="Yan">
+                    <input class="form-control" id="inputSenderName" name="inputSenderName" placeholder="Sender Name" type="text" value="Sender's Name">
                 </div>
             </div>
         </div>
