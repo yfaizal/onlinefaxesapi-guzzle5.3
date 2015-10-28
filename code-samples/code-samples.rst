@@ -1,10 +1,30 @@
-# onlinefaxesapi-guzzle5.3 code samples
-Code samples
+Guzzle5.3 Code Samples
+=================
 
 
-#### Features included :-
-* Auto-checking token expiry before every request.
-* Re-request for a new token and save it into database ( sample sql included. )
-* Use PHP Session Upload Progress to hold Posting to API until finished uploading/attaching big file(s).So don't forget to ```session.upload_progress.enabled = On``` in your ```php.ini``` file.
-* Basic server-side validation to check some blank fields (send fax form).
-* Use OAuth2 plugin by <a href="https://github.com/commerceguys/guzzle-oauth2-plugin" target="_blank">Commerce Guys</a>.
+Get The Access Token
+    .. code-block:: php
+
+        use GuzzleHttp\Client;
+        use CommerceGuys\Guzzle\Oauth2\Oauth2Subscriber;
+        $base_url = 'https://api.onlinefaxes.com/v2/';
+        $oauth2Client = new Client(['base_url' => $base_url]);
+
+        $config = [
+        'client_id' => 'YOUR_ID',
+        'client_secret' => 'YOUR SECRET',
+        'grant_type' => 'client_credentials',
+        'scope' => null,
+        ];
+
+        $accessToken = new CommerceGuys\Guzzle\Oauth2\GrantType\ClientCredentials($oauth2Client, $config);
+        $oauth2 = new Oauth2Subscriber($accessToken);
+        
+        // response data
+        $response = $oauth2->getAccessToken();
+        // return token
+        $response->getToken()
+        // return expiry date ie. 2015-10-02 18:56:20
+        $response->getExpires()->format('Y-m-d H:i:s')
+        // return default expiry timezone ie America/Chicago
+        $response->getExpires()->getTimezone()->getName()
