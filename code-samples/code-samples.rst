@@ -76,3 +76,123 @@ Guzzle5.3 Code Samples
         // get response in json
         $json = $response->json();
         var_dump($json);
+
+**Get Fax Status**
+
+    .. code-block:: php
+    
+        use GuzzleHttp\Client;
+        
+        $client = new Client();
+        $request = $client->createRequest('POST', 'https://api.onlinefaxes.com/v2/fax/async/getfaxstatus', [
+        'headers' => ['Content-Type' => 'application/x-www-form-urlencoded',
+                       'Authorization' => 'ofx YOUR ACCESS TOKEN'],
+        'query' => ['faxId' => '012345678901'],
+        ]);
+        // send request
+        $response = $client->send($request);
+        
+        // get response in json
+        $json = $response->json();
+        // will return status i.e 'Completed'
+        echo $json['Status'];
+   
+**Download Fax**
+
+    .. code-block:: php
+    
+        use GuzzleHttp\Client;
+        use GuzzleHttp\Query;
+        
+        $client = new Client();
+        $request = $client->createRequest('POST', 'https://api.onlinefaxes.com/v2/fax/async/downloadfaxfile', [
+        'headers' => ['Content-Type' => 'application/x-www-form-urlencoded',
+                   'Authorization' => 'ofx YOUR ACCESS TOKEN'],
+        'query' => ['faxId' => '012345678901'],
+        ]);
+        // send request and get response
+        $response = $client->send($request);
+        
+        // get response in json
+        $json = $response->json();
+        // will return Url for fax download
+        echo $json['Status'];
+
+**Delete Fax**
+
+    .. code-block:: php
+    
+        use GuzzleHttp\Client;
+        use GuzzleHttp\Query;
+        
+        $client = new Client();
+        $request = $client->createRequest('POST', 'https://api.onlinefaxes.com/v2/fax/async/deletefax', [
+        'headers' => ['Content-Type' => 'application/x-www-form-urlencoded',
+                   'Authorization' => 'ofx YOUR ACCESS TOKEN'],
+                   'verify' => false, // disable cert
+        ]);
+        $query = $request->getQuery();
+        $query['faxId'] = '1234567890';
+        // send request
+        $response = $client->send($request);
+        // get response in json
+        $json = $response->json();
+        // return response
+        echo $json['Status'];
+
+**Get Fax Detail**
+
+    .. code-block:: php
+    
+        use GuzzleHttp\Client;
+
+        $client = new Client();
+        $request = $client->createRequest('POST', 'https://api.onlinefaxes.com/v2/fax/async/getfaxdetail', [
+        'headers' => ['Content-Type' => 'application/x-www-form-urlencoded',
+                       'Authorization' => 'ofx YOUR ACCESS TOKEN'],
+        'query' => ['faxId' => '012345678901'],
+        ]);
+        // send request and get response
+        $response = $client->send($request);
+        // get response in json
+        $json = $response->json();
+        // get Fax sending status i.e 'Completed'
+        echo $json['MessageDetails']['Status'];
+        // get Fax Transaction Id
+        echo $json['MessageDetails']['Transactions']['TransactionDetails']['TransactionID'];
+        // get all ['MessageDetails'] response
+        foreach($json['MessageDetails'] as $key=>$value) { //foreach element in $arr
+        echo $key.' = '.$value.'
+        '; //etc
+        }
+        
+*Note : Please check this link <https://onlinefaxes.readme.io/docs/get-fax-details> for a full lists of response data.*
+
+**Get Fax List**
+
+    .. code-block:: php
+    
+        use GuzzleHttp\Client;
+        $client = new Client();
+        // get response in json
+        $json = $response->json();
+        // loop through the json data
+        foreach($json as $key=>$value) { //foreach element in $json
+        echo $key.' = '.$value['Id']; // $value['Subject'],$value['RecpName'] etc.
+        }
+        // set folderId
+        $setFolderId = '1001'; // Inbox(1001),Processing(1002),Sent(1003),Failed(1004),Deleted(1007)
+        $request = $client->createRequest('POST', 'https://api.onlinefaxes.com/v2/fax/async/getfaxlist', [
+        'headers' => ['Content-Type' => 'application/x-www-form-urlencoded',
+                       'Authorization' => 'ofx YOUR ACCESS TOKEN'],
+        'query' => ['folderId' => $setFolderId, 'isDownloaded' => 'true'],,
+        ]);
+        // send request and get response
+        $response = $client->send($request);
+        
+        // get response in json
+        $json = $response->json();
+        // loop through the json data
+        foreach($json as $key=>$value) { //foreach element in $json
+        echo $key.' = '.$value['Id']; // $value['Subject'],$value['RecpName'] etc.
+        }
