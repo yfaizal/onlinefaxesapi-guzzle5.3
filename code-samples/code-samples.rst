@@ -73,3 +73,6 @@ Guzzle5.3 Code Samples
     
         // send request
         $response = $client->send($request);
+        // get response in json
+        $json = $response->json();
+        var_dump($json);
