@@ -62,7 +62,7 @@ Guzzle5.3 Code Samples
     
         $request = $client->createRequest('POST', 'https://api.onlinefaxes.com/v2/fax/async/sendfax/complexmodel','headers' => ['Content-Type' => 'application/x-www-form-urlencoded',
                  'Authorization' => 'ofx YOUR ACCESS TOKEN'],
-        'verify' => false, // cert
+        'verify' => true, // cert
         ])
     
         $postBody = $request->getBody();
@@ -129,7 +129,7 @@ Guzzle5.3 Code Samples
         $request = $client->createRequest('POST', 'https://api.onlinefaxes.com/v2/fax/async/deletefax', [
         'headers' => ['Content-Type' => 'application/x-www-form-urlencoded',
                    'Authorization' => 'ofx YOUR ACCESS TOKEN'],
-                   'verify' => false, // disable cert
+                   'verify' => true,
         ]);
         $query = $request->getQuery();
         $query['faxId'] = '1234567890';
