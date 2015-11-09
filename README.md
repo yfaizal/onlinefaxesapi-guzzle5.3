@@ -38,6 +38,8 @@ Click <a href="http://apidemo.onlinefaxes.com" target="_blank">here</a> to see a
 * Delete Fax
 * Get Fax Detail
 * Get Fax List
+* Resend Fax
+* Send Fax As Email Attachment
 
 Note: The send fax operation is a combination of Simple and Complex Model.Please see ```send-fax.php``` file to understand the logic/flow. 
 
