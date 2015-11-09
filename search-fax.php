@@ -10,8 +10,6 @@ require("_check_token.php");
     <?php
         $setDashboardActiveLink = 'mnusearch';
         require("_dashboard-menu.php");
-        // check redirect action
-         // echo $_POST['faxid'].'-'.$_POST['action'];
 
     ?>
 
@@ -22,7 +20,7 @@ require("_check_token.php");
     $client = new Client();
 
     if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
-       // echo $_POST['faxid'].'-'.$_POST['action'].'='.$_POST['search-type'];
+
         $postFaxId = $_POST['faxid'];
         $uriSearch = $_POST['uri-search'];
 
@@ -33,7 +31,7 @@ require("_check_token.php");
             ]);
             // var_dump($request->getQuery());exit;
             $response = $client->send($request);
-           // var_dump($response->getBody());
+        $json = $response->json();
         ?>
         <script>
             // assign search faxid to the input box

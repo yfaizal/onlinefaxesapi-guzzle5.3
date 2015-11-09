@@ -70,8 +70,7 @@ if(strpos($_SERVER['REQUEST_URI'],'index')!== false ){
                     <button id="token-status" type="button" class="btn <?php echo $tokenBtn;?> navbar-btn token-status"> <?php echo $tokenText;?>&nbsp;<span class="glyphicon <?php echo $tokenIcon;?>" aria-hidden="true"></span> </button>
                     <form class="navbar-form navbar-right" method="post" role="search" action="search-fax.php">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="faxid" value="" placeholder="Fax Id">
-                            <input type="hidden" name="action" value="search-fax" placeholder="Fax Id">
+                            <input type="text" class="form-control" id="inputFaxId" name="faxid" value="" placeholder="Fax Id">
                         </div>
                         <select class="form-control" name="uri-search">
                             <option value="getfaxstatus">Fax Status</option>
